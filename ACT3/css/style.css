@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 body{
@@ -13,6 +14,7 @@ body{
 header{
     font-family: 'Pacifico', cursive;
     background: #6a24a7;
+   
     color: white;
     padding: 8px 20px;
 }
@@ -84,11 +86,12 @@ header{
     width: 380px;
 }
 img {
+    width: 220px;
+    height: 150px;
+    text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 100%;
+margin-left: auto;
+margin-right: auto;
   } 
 
 h4{
@@ -98,5 +101,34 @@ h4{
     margin: 20px;
     padding : 20px;
     
+}
+h2{
+    padding:20px;
+}
+#status{
+    border: 1px solid #DA22FF;
+    border-radius: 15px;
+   padding : 20px;
+   margin : 20px;
+}
+.jokes-list-container{
+   text-align: center;
+}
+  
+.imahe{
+    
+    display:block;
+    width: 150px;
+    height: 200px;  
+
+
+}
+#status-container img{
+    text-align: center;
+    width: 150px;
+    height: 70%;
+    
+    display: block;
+
 }
 

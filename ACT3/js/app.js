@@ -19,10 +19,10 @@ $(function(){
     jokeButton.on('click',async function(e){
       //Do the magic here
      
-      $('.imahe').remove();
+       $('.imahe').remove();
         await generateJoke();
-       
-        await generateAnswer();
+        
+        
       
     });
   
@@ -41,28 +41,42 @@ $(function(){
     });
 
       function generateJoke(){
-
+        var joke
+       
         JOKE_SERVICE.get()
+                    
                     .then(function(res){
 
-                      var joke = res;
-                      var li=
-                      `
-                      <div class="content">
-                      <li >
-                          ${joke}
-                      </li>
-                      </div>
-                      `
-                      jokesList.append(li);
-                  })
+                       joke = res;
+                      
+                  
+                })
+       JOKE_SERVICE.answer() 
+                .then(function(res){
+
+                  var ansimage = res.image;
+
+                  var li=
+                      
+                  `
+                  <div class="content">
+                  <li >
+
+                      <h2> ${joke}  </h2>
+                      <img class="jokeimage" src="${ansimage}" alt="">
+                      <h4 class="finalmes"> </h4>
+                  </li>
+                  </div>
+                  `
+                  jokesList.append(li);
+                })
                   .then(function(){
                     jokeCount++;
 
                     if(jokeCount===5){
                       $('#joke-button').prop('disabled', true);
                       jokeResetButton.show();
-                      
+                      generateAnswer();
                         if(yesCount >= 3){
                           $('.finalmes').append("CONGRATULATION YOU ARE SO LUCKY");
                         }else
@@ -90,7 +104,7 @@ $(function(){
                   `
                   <div>
                   <img class="imahe" src="${ansimage}" alt="">
-                  <h4 class="finalmes"> </h4>
+                 
                   </div>
                   `
                 reaction.append(li);
