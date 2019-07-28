@@ -27,6 +27,7 @@ header{
     max-width: 1024px;
     margin: auto;
     padding: 20px;
+  
 }
 
 .row{
@@ -43,7 +44,7 @@ header{
 }
 
 .hero button{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 20px;
     margin-top: 25px;
     border-radius: 100px;
@@ -60,6 +61,18 @@ header{
 #jokes-list{
     list-style: none;
     padding: 0;
+    
+   
+}
+ #content{
+    margin: 20px;
+    padding: 20px;
+}
+ li{
+     border: 1px solid #DA22FF;
+    padding : 20px;
+    margin : 20px;
+    
 }
 
 
