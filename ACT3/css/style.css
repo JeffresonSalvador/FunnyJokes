@@ -74,6 +74,27 @@ header{
     margin : 20px;
     
 }
+#reaction img{
+    width: 380px;
+    
+    
+}
+#status-container{
+    width: 380px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100%;
+  } 
 
+.finalmes h4{
 
+    font-size: 7em;
+    background: #DA22FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #9733EE, #DA22FF);
+}
 
