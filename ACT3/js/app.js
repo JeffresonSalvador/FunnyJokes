@@ -61,10 +61,11 @@ $(function(){
                   `
                   <div class="content">
                   <li >
-
+                    <div>
                       <h2> ${joke}  </h2>
                       <img class="jokeimage" src="${ansimage}" alt="">
-                      <h4 class="finalmes"> </h4>
+                      
+                     </div> 
                   </li>
                   </div>
                   `
@@ -78,13 +79,13 @@ $(function(){
                       jokeResetButton.show();
                       generateAnswer();
                         if(yesCount >= 3){
-                          $('.finalmes').append("CONGRATULATION YOU ARE SO LUCKY");
+                          $('.jokeimage').append("CONGRATULATION YOU ARE SO LUCKY");
                         }else
                         if(noCount >=3){
-                          $('.finalmes').append("SORRY YOU ARE NOT LUCKY");
+                          $('.jokeimage').append("SORRY YOU ARE NOT LUCKY");
                         }
                     }else{
-                      $('.finalmes').remove();
+                     // $('.finalmes').remove();
                      
                     }
 
