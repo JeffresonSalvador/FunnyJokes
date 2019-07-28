@@ -18,8 +18,8 @@ $(function(){
     //Events
     jokeButton.on('click',async function(e){
       //Do the magic here
-      $('.finalmes').remove();
-       $('.imahe').remove();
+     
+      $('.imahe').remove();
         await generateJoke();
        
         await generateAnswer();
@@ -29,10 +29,10 @@ $(function(){
 
 
     
-    jokeResetButton.on('click', function(){
-      $('.content').remove();
-      $('.imahe').remove();
-      $('.finalmes').remove();
+    jokeResetButton.on('click',async function(){
+     await $('.content').remove();
+      await $('.imahe').remove();
+      await $('h4').remove();
       jokeCount = 0;
       yesCount = 0;
       noCount = 0;
@@ -58,15 +58,20 @@ $(function(){
                   })
                   .then(function(){
                     jokeCount++;
+
                     if(jokeCount===5){
                       $('#joke-button').prop('disabled', true);
                       jokeResetButton.show();
-
+                      
                         if(yesCount >= 3){
                           $('.finalmes').append("CONGRATULATION YOU ARE SO LUCKY");
-                        }else{
+                        }else
+                        if(noCount >=3){
                           $('.finalmes').append("SORRY YOU ARE NOT LUCKY");
                         }
+                    }else{
+                      $('.finalmes').remove();
+                     
                     }
 
 
@@ -92,7 +97,8 @@ $(function(){
                 if(answer === "yes"){
                   yesCount++;
 
-                }else{
+                }else
+                if(answer === "no"){
                   noCount++;
                 }
                 console.log(yesCount);

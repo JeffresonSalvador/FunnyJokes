@@ -70,6 +70,7 @@ header{
 }
  li{
      border: 1px solid #DA22FF;
+     border-radius: 15px;
     padding : 20px;
     margin : 20px;
     
@@ -90,11 +91,12 @@ img {
     height: 100%;
   } 
 
-.finalmes h4{
+h4{
+    border: 1px solid #DA22FF;
+     border-radius: 15px;
+    font-size: 30px;
+    margin: 20px;
+    padding : 20px;
     
-    font-size: 7em;
-    background: #DA22FF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #9733EE, #DA22FF);
 }
 
