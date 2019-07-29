@@ -13,7 +13,7 @@ body{
 
 header{
     font-family: 'Pacifico', cursive;
-    background: #6a24a7;
+    background: rgb(14, 13, 13);
    
     color: white;
     padding: 8px 20px;
@@ -54,6 +54,13 @@ header{
     color: white;
     outline: none;
     transition: .25s background ease-in-out;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+.hero button:hover{
+    background-color: rgb(54, 152, 182); /* Green */
+    color: white;
 }
 
 .hero button:disabled{
@@ -75,7 +82,7 @@ header{
      border-radius: 15px;
     padding : 20px;
     margin : 20px;
-    
+    padding-bottom: 50px;
 }
 #reaction img{
     width: 380px;
@@ -110,6 +117,7 @@ h2{
     border-radius: 15px;
    padding : 20px;
    margin : 20px;
+   
 }
 .jokes-list-container{
    text-align: center;
@@ -126,6 +134,9 @@ h2{
     width: 100%;
 
 }
+.content{
+    margin:30px;
+}
 #status-container img{
     text-align: center;
     width: 150px;
@@ -135,6 +146,9 @@ h2{
 
 }
 .likebutton {
+    
+    display:block;
+    float: left;
     font: bold 11px Arial;
     text-decoration: none;
     background-color: #EEEEEE;
@@ -144,7 +158,43 @@ h2{
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   }
+  .likebutton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  .sharebutton{
+    display:block;
+    float: left;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  }
+  .sharebutton:hover{
+    background-color: blue; /* Green */
+    color: white;
+  }
+  #buttonlike{
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 10px;
+     
+  }
+  #buttonshare{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   @media only screen and (max-width: 500px) {
     body {
       background-color: lightblue;
