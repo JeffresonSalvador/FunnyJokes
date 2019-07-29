@@ -149,4 +149,7 @@ h2{
     body {
       background-color: lightblue;
     }
+    .row{
+        display:flex;
+    }
   }
