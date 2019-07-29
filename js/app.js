@@ -20,7 +20,7 @@ $(function(){
       //Do the magic here
      
        $('.imahe').remove();
-        await generateJoke();
+         generateJoke();
         
         
       
@@ -52,8 +52,8 @@ $(function(){
                   
                 })
        JOKE_SERVICE.answer() 
-                .then(function(res){
-
+                .then(async function(res){
+                  await(res);
                   var ansimage = res.image;
 
                   var li=
