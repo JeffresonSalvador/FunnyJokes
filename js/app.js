@@ -64,7 +64,7 @@ $(function(){
                     <div>
                       <h2> ${joke}  </h2>
                       <img class="jokeimage" src="${ansimage}" alt="">
-                      
+                      <button class="likebutton">Like</button>
                      </div> 
                   </li>
                   </div>
