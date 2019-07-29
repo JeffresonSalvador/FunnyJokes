@@ -33,6 +33,7 @@ $(function(){
      await $('.content').remove();
       await $('.imahe').remove();
       await $('h4').remove();
+      await $('p').remove();
       jokeCount = 0;
       yesCount = 0;
       noCount = 0;
@@ -42,7 +43,8 @@ $(function(){
 
       function generateJoke(){
         var joke;
-       
+        var ansimage;
+        var answer;
         JOKE_SERVICE.get()
                     
                     .then(function(res){
@@ -54,8 +56,9 @@ $(function(){
        JOKE_SERVICE.answer() 
                 .then(async function(res){
                   await(res);
-                  var ansimage = res.image;
-
+                   ansimage = res.image;
+                   answer = res.answer;
+                   console.log(answer);
                   var li=
                       
                   `
@@ -74,16 +77,25 @@ $(function(){
                 })
                   .then(function(){
                     jokeCount++;
+                    if(answer === "yes"){
+                      yesCount++;
+    
+                    }else
+                    if(answer === "no"){
+                      noCount++;
+                    }
+                    console.log(yesCount);
+                    console.log(noCount);
 
                     if(jokeCount===5){
                       $('#joke-button').prop('disabled', true);
                       jokeResetButton.show();
                       generateAnswer();
                         if(yesCount >= 3){
-                          $('.jokeimage').append("CONGRATULATION YOU ARE SO LUCKY");
+                          $('.lastmes').append("CONGRATULATION YOU ARE SO LUCKY");
                         }else
                         if(noCount >=3){
-                          $('.jokeimage').append("SORRY YOU ARE NOT LUCKY");
+                          $('.lastmes').append("SORRY YOU ARE NOT LUCKY");
                         }
                     }else{
                      // $('.finalmes').remove();
@@ -101,24 +113,36 @@ $(function(){
                 var ansans = res.forced;
                 var answer = res.answer;
                 
-                
+                if(yesCount >= 3){
                   var li=
                   `
                   <div>
                   <img class="imahe" src="${ansimage}" alt="">
-                 
-                  </div>
-                  `
-                reaction.append(li);
-                if(answer === "yes"){
-                  yesCount++;
+                  <p class="lastmes"> 
 
+                    CONGRATULATIONS YOU ARE SO LUCKY !!!
+                  </p>
+                  </div>
+                  `;
                 }else
-                if(answer === "no"){
-                  noCount++;
+                if(noCount >=3){
+                  var li=
+                  `
+                  <div>
+                  <img class="imahe" src="${ansimage}" alt="">
+                  <p class="lastmes"> 
+
+                    SORRY TRY YOUR LUCK NEXT TIME !!!
+                  
+                  </p>
+                  </div>
+                  `;
+
+
                 }
-                console.log(yesCount);
-                console.log(noCount);
+                 
+                reaction.append(li);
+               
 
               })
       }

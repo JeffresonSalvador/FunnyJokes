@@ -114,17 +114,17 @@ h2{
     padding:20px;
 }
 #status{
-    float:right;
+   
     border: 1px solid #DA22FF;
     border-radius: 15px;
    padding : 20px;
    margin : 20px;
 }
 #status h3{
-    float:right;
+    
 }
 .row{
-    display:flex;
+   
 
 }
 .jokes-list-container{
@@ -202,6 +202,12 @@ h2{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
+  }
+  .lastmes{
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, .7);
+    padding:20px;
+    font-weight: bold;
   }
 
   @media only screen and (max-width: 500px) {
