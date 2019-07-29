@@ -41,7 +41,7 @@ $(function(){
     });
 
       function generateJoke(){
-        var joke
+        var joke;
        
         JOKE_SERVICE.get()
                     
@@ -62,7 +62,7 @@ $(function(){
                   <div class="content">
                   <li >
                     <div>
-                      <h2> "${joke}"  </h2>
+                      <h2> ${joke}  </h2>
                       <img class="jokeimage" src="${ansimage}" alt="">
                       
                      </div> 
