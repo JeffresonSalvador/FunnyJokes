@@ -91,6 +91,7 @@ header{
 }
 #status-container{
     width: 380px;
+    
 }
 img {
     
@@ -113,11 +114,18 @@ h2{
     padding:20px;
 }
 #status{
+    float:right;
     border: 1px solid #DA22FF;
     border-radius: 15px;
    padding : 20px;
    margin : 20px;
-   
+}
+#status h3{
+    float:right;
+}
+.row{
+    display:flex;
+
 }
 .jokes-list-container{
    text-align: center;
@@ -193,6 +201,7 @@ h2{
   #buttonshare{
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
 
   @media only screen and (max-width: 500px) {
