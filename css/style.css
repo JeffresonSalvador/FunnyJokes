@@ -25,6 +25,7 @@ header{
     background: linear-gradient(to left, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
 .container{
     max-width: 1024px;
     margin: auto;
@@ -59,12 +60,15 @@ header{
 
 }
 .hero button:hover{
-    background-color: rgb(54, 152, 182); /* Green */
-    color: white;
+    /* background-color: rgb(54, 152, 182); 
+   color: white; */
 }
 
 .hero button:disabled{
     background: rgba(255, 255, 255, .7)
+}
+.hero button:active{
+    background: rgb(87, 55, 116);
 }
 
 #jokes-list{
@@ -216,6 +220,6 @@ h2{
     }
     .row{
         display:flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
   }

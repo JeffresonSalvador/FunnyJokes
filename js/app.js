@@ -90,6 +90,9 @@ $(function(){
                     if(jokeCount===5){
                       $('#joke-button').prop('disabled', true);
                       jokeResetButton.show();
+
+                      document.body.scrollTop = 0;
+
                       generateAnswer();
                         if(yesCount >= 3){
                           $('.lastmes').append("CONGRATULATION YOU ARE SO LUCKY");
@@ -99,7 +102,7 @@ $(function(){
                         }
                     }else{
                      // $('.finalmes').remove();
-                     
+                     document.body.scrollIntoView(false);
                     }
 
 
